@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Arapey|Crimson+Text|Poiret+One|Quicksand|Work+Sans&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  background-color: #344a72;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Poiret One', cursive;
+  color: #3c4245;
+}
+
+#sign-in-container {
+  /* height: 100vh; */
+  margin: 0 auto;
+  max-width: 550px;
+  background-color: white;
+  font-size: 1.2em;
+}
+
+#logo {
+  margin-top: 10px;
+  background-color: #f4f3f3;
+}
+
+input, select {
+  margin: 0;
+  padding: 0;
+  border: #ddd 1px solid;
+  border-radius: 3px;
+}
+
+button {
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  display: block;
+  width: 100%;
+  background-color: #49c1a2;
+  bottom: 0;
+}
+
+button:hover {
+  background-color: #37a08e;
+}
+
+.form-container {
+  display: flex;
+  margin: 30px auto;
+  padding: 0 30px;
+}
+
+.date {
+  display: block;
+  width: 100%;
+}
+
+.alert {
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+  color: #d61e1e;
+  opacity: .5;
+  margin-bottom: 10px;
+}
+
+.hide {
+  display: none;
+}

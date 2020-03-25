@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Arapey|Crimson+Text|Poiret+One|Quicksand|Work+Sans&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  color: #63707e;
+  background-color: #f2f6f5;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  height: 90vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+.content {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  height: 75vh;
+  background-color: #c8dad3;
+  color: #63707e;
+  overflow: auto;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+.content .col {
+  margin: 50px 25px;
+}
+
+span {
+  color: #3282b8;
+}
+
+.bottom {
+  font-size: 1em;
+  margin-top: 10px;
+  text-align: center;
+  bottom: 0;
+  color: #c1c5c7;
+}
