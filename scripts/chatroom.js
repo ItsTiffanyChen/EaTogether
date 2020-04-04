@@ -2,8 +2,7 @@ let oldUser;
 
 // remember to change Tiff back to some default
 const loadUserName = () => {
-  oldUser = JSON.parse(localStorage.getItem("user")) ? JSON.parse(localStorage.getItem("user")) : {
-    name: "Tiffany"
+  oldUser = JSON.parse(localStorage.getItem("user"))
   };
 }
 loadUserName();
