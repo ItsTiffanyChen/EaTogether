@@ -3,6 +3,7 @@ const dateEl = document.querySelector("#date");
 const timeEl = document.querySelector("#time");
 const btns = document.querySelectorAll("button");
 
+// no matter which one user clicks, it brings user to rationale page
 btns.forEach(item => {
   item.addEventListener('click', () => {
     window.location = "rationale.html"

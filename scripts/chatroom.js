@@ -1,11 +1,11 @@
 let oldUser;
 
-// remember to change Tiff back to some default
-const loadUserName = () => {
+// getting user's info from localStorage
+const loadUser = () => {
   oldUser = JSON.parse(localStorage.getItem("user"))
   };
 
-loadUserName();
+loadUser();
 
 // John's first two messages
 const johnMsg = ["Hello! I'm John. What are your names?", "What kind of cuisines do you guys like?"];
@@ -16,6 +16,7 @@ let johnIndex = 0;
 // Mary's first message
 const maryMsg = "Hi, I'm Mary. Nice to meet you all on here";
 
+// list of possible cuisines
 const cuisines = ['italian', 'mexican', 'japanese', 'chinese', 'indian', 'thai', 'french', 'ethiopian', 'korean', 'spanish', 'tapas', 'viet', 'hamburger', 'burger', 'fries', 'dessert', 'sandwich', 'fast',
 'american', 'salad', 'any', 'every', 'depend', 'whatever'];
 
@@ -25,7 +26,7 @@ let isNameAsked = false;
 
 let isOver = false;
 
-// printed if user doesn't answer in ___ secs
+// printed if user doesn't answer in 7 secs
 const johnAskFirst = [
   {
     person: "Mary",
@@ -166,14 +167,13 @@ const printUser = () => {
   updateScroll()
 };
 
-// shows latest message if scrollHeight is greater that clientHeight
+// shows latest message if scrollHeight is greater than clientHeight
 const updateScroll = () => {
   let isScrolledToBottom = chatArea.scrollHeight - chatArea.clientHeight <= chatArea.scrollTop;
   if (!isScrolledToBottom) chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
 };
 
 const printJ = () => {
-  // 沒有這個就會多印一個undefined?
   if (johnIndex < 2) {
     chatArea.innerHTML +=
       `<div class="system">
@@ -205,7 +205,7 @@ const printM = () => {
 };
 
 const checkUserName = () => {
-  // only execute once, if john has finished his second message, don't execute
+  // only execute once. if john has finished his second message, don't execute
   if (johnIndex == 1) {
     let time = 0;
     let timer = setInterval(() => {
@@ -232,6 +232,7 @@ const evaluateFirstCuisine = () => {
   let time = 0;
   let isCuisineFound = false;
   let timer = setInterval(() => {
+    // checkes user's input every 0.1 sec
     time += 100;
     let input = inputEl.value.toLowerCase();
     if (input) {
@@ -242,13 +243,13 @@ const evaluateFirstCuisine = () => {
         }
       };
     } else if (time == 7000) {
+      // mary answers, and after 1 sec, john asks user
       printOneMsg(johnAskFirst, 0);
       setTimeout(() => {
         printOneMsg(johnAskFirst, 1)
       }, 1000);
       clearInterval(timer);
       evaluateSecondCuisine()
-      // mary answers, 1 sec, john asks user
     }
   }, 100)
 };
@@ -303,6 +304,7 @@ const printAll = (arr, index) => {
   }
 };
 
+// John and Mary leave chat after chat has ended
 const leaveChat = () => {
   setTimeout(() => {
     chatArea.innerHTML +=

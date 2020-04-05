@@ -74,6 +74,7 @@ function printMonthOption() {
 
 printMonthOption();
 
+// reset user when page reloads
 function reset() {
   localStorage.clear("oldUser");
 };
