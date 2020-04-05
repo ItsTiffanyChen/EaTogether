@@ -177,7 +177,7 @@ const printJ = () => {
   if (johnIndex < 2) {
     chatArea.innerHTML +=
       `<div class="system">
-          <p class="system-bubble">J</p>
+          <p class="system-bubble john-bubble">J</p>
           <span>${johnMsg[johnIndex]}</span>
         </div>`;
     if (johnIndex == 1) {
@@ -273,7 +273,7 @@ const evaluateSecondCuisine = () => {
 const printOneMsg = (arr, index) => {
     chatArea.innerHTML +=
     `<div class="system">
-      <p class="system-bubble ${arr[index].person === "John" ? "" : "mary-bubble" }">${arr[index].person === "John" ? "J" : "M"}</p>
+      <p class="system-bubble ${arr[index].person === "John" ? "john-bubble" : "mary-bubble" }">${arr[index].person === "John" ? "J" : "M"}</p>
       <span>${arr[index].text}</span>
     </div>`;
     updateScroll()
@@ -292,7 +292,7 @@ const printAll = (arr, index) => {
     setTimeout(() => {
       chatArea.innerHTML +=
       `<div class="system">
-        <p class="system-bubble">${arr[i].person === "John" ? "J" : "M"}</p>
+        <p class="system-bubble ${arr[index].person === "John" ? "john-bubble" : "mary-bubble" }">${arr[i].person === "John" ? "J" : "M"}</p>
         <span>${arr[i].text}</span>
       </div>`;
       updateScroll();
