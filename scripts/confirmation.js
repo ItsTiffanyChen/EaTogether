@@ -5,7 +5,7 @@ const btns = document.querySelectorAll("button");
 
 btns.forEach(item => {
   item.addEventListener('click', () => {
-    window.location = "./rationale.html"
+    window.location = "rationale.html"
   })
 });
 
