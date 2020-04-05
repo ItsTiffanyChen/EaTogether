@@ -4,7 +4,7 @@ let oldUser;
 const loadUserName = () => {
   oldUser = JSON.parse(localStorage.getItem("user"))
   };
-}
+
 loadUserName();
 
 // John's first two messages
