@@ -199,7 +199,7 @@ setTimeout(printJ, 2500);
 const printM = () => {
   chatArea.innerHTML +=
     `<div class="system">
-      <p class="system-bubble">M</p>
+      <p class="system-bubble mary-bubble">M</p>
       <span>${maryMsg}</span>
     </div>`;
 };
@@ -218,7 +218,7 @@ const checkUserName = () => {
         // Mary asks user's name if still hasn't replied
         chatArea.innerHTML +=
           `<div class="system">
-        <p class="system-bubble">M</p>
+        <p class="system-bubble mary-bubble">M</p>
         <span>Hiyaaaa other friend!! What's your name?</span>
       </div>`;
         isNameAsked = true;
@@ -273,7 +273,7 @@ const evaluateSecondCuisine = () => {
 const printOneMsg = (arr, index) => {
     chatArea.innerHTML +=
     `<div class="system">
-      <p class="system-bubble">${arr[index].person === "John" ? "J" : "M"}</p>
+      <p class="system-bubble ${arr[index].person === "John" ? "" : "mary-bubble" }">${arr[index].person === "John" ? "J" : "M"}</p>
       <span>${arr[index].text}</span>
     </div>`;
     updateScroll()

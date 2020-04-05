@@ -81,6 +81,10 @@ p.system-bubble {
   font-size: 1.2em;
 }
 
+.mary-bubble {
+  background-color: #de4e6d;
+}
+
 p.user-bubble {
   color: white;
   display: inline-block;
